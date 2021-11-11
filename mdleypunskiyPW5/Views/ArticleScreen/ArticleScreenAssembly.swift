@@ -12,8 +12,11 @@ final class ArticleScreenAssembly {
         let vc = ArticleScreenViewController()
         let interactor = ArticleScreenInteractor()
         let presenter = ArticleScreenPresenter()
+        let worker = ArticleScreenWorker()
+        worker.interactor = interactor
         presenter.viewController = vc
         interactor.presenter = presenter
+        interactor.worker = worker
         vc.interactor = interactor
         return vc
     }

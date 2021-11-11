@@ -9,10 +9,14 @@ import UIKit
 
 enum ArticleScreenModels {
     enum Article {
-        struct Requast {}
-        struct Response {}
+        struct Request {}
+        struct Response {
+            var articles: [ArticleModel]
+        }
         
-        struct ViewModel {}
+        struct ViewModel {
+            var articles: [ArticleModel]
+        }
         
         struct ArticlePage: Decodable {
             var news: [ArticleModel]?

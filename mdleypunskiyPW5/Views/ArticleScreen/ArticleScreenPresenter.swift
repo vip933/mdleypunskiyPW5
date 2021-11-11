@@ -8,9 +8,13 @@
 import UIKit
 
 protocol ArticleScreenPresentationLogic {
-    
+    func presentNews()
 }
 
 final class ArticleScreenPresenter: ArticleScreenPresentationLogic {
     weak var viewController: ArticleScreenDisplayLogic?
+    
+    func presentNews() {
+        
+    }
 }
